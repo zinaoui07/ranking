@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Rankings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ranking2.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <nav class="nav-inner" aria-label="Main">
+      <a href="#" class="nav-link">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Home
+      </a>
+      <a href="#" class="nav-link">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Students
+      </a>
+      <a href="#" class="nav-link">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Subjects
+      </a>
+      <a href="results.html" class="nav-link">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+        Results
+      </a>
+      <a href="#" class="nav-link">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Search
+      </a>
+      <a href="index.html" class="nav-link nav-link--active" aria-current="page">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+        Rankings
+      </a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="page-header">
+      <h1>Student Rankings</h1>
+      <p class="subtitle">Rankings by overall average</p>
+    </div>
+
+    <section class="stats" id="stats" aria-live="polite">
+      <article class="stat-card">
+        <span class="stat-card__icon stat-card__icon--teal" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <div class="stat-card__text">
+          <span class="stat-card__label">Total Students</span>
+          <span class="stat-card__value stat-card__value--teal" data-stat="total">0</span>
+        </div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-card__icon stat-card__icon--teal" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </span>
+        <div class="stat-card__text">
+          <span class="stat-card__label">Overall Average</span>
+          <span class="stat-card__value stat-card__value--teal" data-stat="avg">0</span>
+        </div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-card__icon stat-card__icon--green" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </span>
+        <div class="stat-card__text">
+          <span class="stat-card__label">Passed (≥ 10)</span>
+          <span class="stat-card__value stat-card__value--green" data-stat="passed">0</span>
+        </div>
+      </article>
+      <article class="stat-card stat-card--tint-orange">
+        <span class="stat-card__icon stat-card__icon--orange" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </span>
+        <div class="stat-card__text">
+          <span class="stat-card__label">Failed (&lt; 10)</span>
+          <span class="stat-card__value stat-card__value--orange" data-stat="failed">0</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="main-panel" aria-labelledby="filters-heading">
+      <div class="filters-panel">
+        <div class="filters-panel__head">
+          <h2 id="filters-heading">Filters</h2>
+          <p class="filters-panel__sub">Filter rankings by year and major.</p>
+        </div>
+        <div class="filters-panel__controls">
+          <label class="field">
+            <span class="field__label">Major</span>
+            <select id="filter-major" class="select">
+              <option value="all">All</option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="field__label">Year</span>
+            <select id="filter-year" class="select">
+              <option value="all">All</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="table-wrap table-wrap--in-panel">
+        <div class="table-scroll">
+          <table class="rankings-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Code</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Year</th>
+                <th>Major</th>
+                <th>Average</th>
+                <th>Honors</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="podium" id="podium" aria-label="Top three students"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
